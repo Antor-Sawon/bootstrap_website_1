@@ -216,7 +216,7 @@ h1{
      overflow: hidden;
   }
 .user-feedback .user-review{
-    padding:2.5rem 1rem 38px;
+    padding:2rem 1rem 38px;
     box-shadow: 3px 3px 0.5px #888;
     background-color: #efefef;
     color: #111;
@@ -225,35 +225,31 @@ h1{
     margin-bottom: 0.5px;
     margin-top:1rem ;
 }
-.user-feedback .p{
+.user-feedback p{
     position: relative;
+    padding:0 0.8rem 0 0.5rem;
     font-size: 1.2rem;
-    font-weight: 400;
-    z-index: 1;
+    line-height: 1.5;
+    quotes: "“" "”";
 }
-.user-feedback .p p{
-    position: relative;
-    z-index: 1 !important;
-}
-.user-feedback .p span{
+.user-feedback p::before{
+    content: open-quote;
     position: absolute;
-    color:#ccc9;
-    width: 150px;
-    height: 150px;
-    text-align: center;
-    font-size: 150px;
-    z-index: -1;
-}
-.user-feedback .p span:first-child{
     top: 0;
-    left: 0;
-    transform: translate(-38%,-55%);
+    transform: translate(-100%,calc(-30% + 5px));
 }
-.user-feedback .p span:last-child{
+.user-feedback p::after{
+    content: close-quote;
+    position: absolute;
     bottom: 0;
-    right: 0;
-    transform: translate(42%,45%);
+    transform: translate(0px,3.8rem);
 }
+.user-feedback p::before ,.user-feedback p::after{
+    font-size: 5rem;
+    color: #888a;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
 
 .user-feedback img{
     width: 50px;
@@ -296,9 +292,6 @@ h1{
         padding: 0 10px 2px;
         height:30px;
     }
-    .user-feedback .user-review{
-        padding:4rem 2rem 38px 1rem;
-    }
     .user-feedback p{
         font-size: 1.7rem;
     }
@@ -308,5 +301,8 @@ h1{
     }
     .user-feedback small{
         font-size: 1.1rem;
+    }
+    .user-feedback p::after{
+        transform: translate(0,3rem);
     }
  }

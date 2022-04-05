@@ -13,7 +13,7 @@
     transform: translate(-50%,-50%);
 }
 .flex-center{
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
 }
@@ -48,9 +48,6 @@ h1{
     font-weight: 600;
     border-radius: 1.5rem;
     width: 7rem;
-    text-align: center;
-    vertical-align: middle;
-    display: inline-block !important;
     border-width: 2px;
 }
 .header h1 , .header p{
@@ -203,12 +200,15 @@ h1{
      color:#fff;
      font-size: 1.1rem;
  }
+ .banner .banner-highlights p{
+     margin-bottom: 0;
+ }
  .banner button{
      background-color: transparent;
      border: 2px solid #fff;
      color: #fff;
      border-radius: 40px;
-     padding: 0.5rem 1rem;
+     /* padding: 0.5rem 1rem; */
 
  }
  /* banner section end */
@@ -273,7 +273,7 @@ h1{
      color: #fff;
  }
  .footer .box i{
-     padding-right: 12px;
+     padding-right: 1rem;
  }
  .footer .box:nth-child(n+2) p,.footer .box:nth-child(n+2) h4{
      padding: 1px 0.5rem;
@@ -351,5 +351,10 @@ h1{
     }
     .footer h4{
         font-size: 2.1rem;
+    }
+ }
+ @media screen and (max-width:240px){
+    .banner .banner-highlights{
+        padding: 2rem !important;
     }
  }
